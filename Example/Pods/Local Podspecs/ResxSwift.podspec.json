@@ -1,0 +1,27 @@
+{
+  "name": "ResxSwift",
+  "version": "0.1.0",
+  "summary": "A short description of ResxSwift.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/amnell/ResxSwift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "amnell": "mathias@apping.se"
+  },
+  "source": {
+    "git": "https://github.com/amnell/ResxSwift.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ResxSwift/Classes/**/*",
+  "dependencies": {
+    "SWXMLHash": [
+      "~> 4.2.1"
+    ]
+  }
+}

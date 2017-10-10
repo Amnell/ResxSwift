@@ -2,47 +2,35 @@
 
 import Quick
 import Nimble
-import ResxSwift
+@testable import ResxSwift
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {
+        
+        let bundle = Bundle(for: TableOfContentsSpec.self)
+        guard let filePath_en = bundle.path(forResource: "Resource.en", ofType: "resx") else { fatalError("File load error") }
+        guard let filePath_sv = bundle.path(forResource: "Resource.sv", ofType: "resx") else { fatalError("File load error") }
+        
+        let fileURL_en = URL(fileURLWithPath: filePath_en)
+        let fileURL_sv = URL(fileURLWithPath: filePath_sv)
+        
         describe("these will fail") {
 
-            it("can do maths") {
-                expect(1) == 2
-            }
-
-            it("can read") {
-                expect("number") == "string"
-            }
-
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
-            
             context("these will pass") {
 
-                it("can do maths") {
-                    expect(23) == 23
+                it("can load resource") {
+                    let resx = ResxSwift()
+                    try! resx.load(fileURL: URL.init(fileURLWithPath: filePath_en), language: "en")
+                    expect(resx.localizedString("Exception_Authorization_Username_Not_Found", language: "en")) == "User not exists."
                 }
-
-                it("can read") {
-                    expect("🐮") == "🐮"
-                }
-
-                it("will eventually pass") {
-                    var time = "passing"
-
-                    DispatchQueue.main.async {
-                        time = "done"
-                    }
-
-                    waitUntil { done in
-                        Thread.sleep(forTimeInterval: 0.5)
-                        expect(time) == "done"
-
-                        done()
-                    }
+                
+                it("can load multiple languages") {
+                    let resx = ResxSwift()
+                    try! resx.load(fileURL: fileURL_en, language: "en")
+                    try! resx.load(fileURL: fileURL_sv, language: "sv")
+                    
+                    expect(resx.localizedString("Exception_Authorization_Username_Not_Found", language: "en")) == "User not exists."
+                    expect(resx.localizedString("Exception_Authorization_Username_Not_Found", language: "sv")) == "Användaren finns inte."
                 }
             }
         }
