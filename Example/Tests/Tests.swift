@@ -32,6 +32,13 @@ class TableOfContentsSpec: QuickSpec {
                     expect(resx.localizedString("Exception_Authorization_Username_Not_Found", language: "en")) == "User not exists."
                     expect(resx.localizedString("Exception_Authorization_Username_Not_Found", language: "sv")) == "Användaren finns inte."
                 }
+                
+                it("will fallback to key if value not found") {
+                    let resx = ResxSwift()
+                    try! resx.load(fileURL: fileURL_en, language: "en")
+                    
+                    expect(resx.localizedString("🍌", language: "en")) == "🍌"
+                }
             }
         }
     }
