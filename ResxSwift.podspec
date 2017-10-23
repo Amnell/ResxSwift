@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ResxSwift'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'ResxSwift makes it easy for you to use resx language resources to use for
   localization in your applications.'
 
