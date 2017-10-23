@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "ResxSwift_Tests.xctest"
-               BlueprintName = "ResxSwift_Tests"
+               BuildableName = "ResxSwift-Example_Tests.xctest"
+               BlueprintName = "ResxSwift-Example_Tests"
                ReferencedContainer = "container:ResxSwift-Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,8 +48,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "ResxSwift_Tests.xctest"
-               BlueprintName = "ResxSwift_Tests"
+               BuildableName = "ResxSwift-Example_Tests.xctest"
+               BlueprintName = "ResxSwift-Example_Tests"
                ReferencedContainer = "container:ResxSwift-Example.xcodeproj">
             </BuildableReference>
          </TestableReference>
