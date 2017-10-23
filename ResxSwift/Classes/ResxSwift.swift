@@ -29,7 +29,7 @@ public final class ResxSwift {
     ///   - key: `String` key
     ///   - namespace: `String` namespace for the localized resource
     ///   - language: `String` language. Will fallback to `fallbackLanguage` if nil
-    /// - Returns: `String?`
+    /// - Returns: `String`
     public func localizedString(_ key: String, namespace: String? = nil, language: String? = nil) -> String {
         guard let language = (language ?? defaultLanguage) else {
             return key
