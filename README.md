@@ -1,6 +1,6 @@
 # ResxSwift
 
-[![CI Status](http://img.shields.io/travis/amnell/ResxSwift.svg?style=flat)](https://travis-ci.org/amnell/ResxSwift)
+[![CI Status](http://img.shields.io/travis/Amnell/ResxSwift.svg?style=flat)](https://travis-ci.org/Amnell/ResxSwift)
 [![Version](https://img.shields.io/cocoapods/v/ResxSwift.svg?style=flat)](http://cocoapods.org/pods/ResxSwift)
 [![License](https://img.shields.io/cocoapods/l/ResxSwift.svg?style=flat)](http://cocoapods.org/pods/ResxSwift)
 [![Platform](https://img.shields.io/cocoapods/p/ResxSwift.svg?style=flat)](http://cocoapods.org/pods/ResxSwift)
